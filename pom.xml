@@ -272,3 +272,15 @@
 
 
 </project>
+
+
+
+
+
+Message mes = new Message();
+mes.setFlag(2);  // Flag 2 represents a login operation
+ConnectServer cs = new ConnectServer(mes);
+mes.setUserid(Integer.parseInt(itf.getText().trim()));
+mes.setUserpassword(String.valueOf(ptf.getPassword()).trim());
+cs.sendMessage();
+Message mes1 = cs.getMessage();
